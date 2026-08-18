@@ -1,17 +1,17 @@
 /* ── ACE-fietsen · design tokens ─────────────────────────────── */
 :root {
-  --ink:        #1c2420;   /* near-black green */
-  --ink-soft:   #46524b;
+  --ink:        #1f2d3d;   /* logo deep navy */
+  --ink-soft:   #4b5866;
   --bg:         #f7f5f0;   /* warm paper */
   --card:       #ffffff;
-  --accent:     #1f6f4a;   /* deep bicycle-green */
-  --accent-dk:  #155236;
-  --accent-lt:  #e3efe8;
+  --accent:     #e63091;   /* logo magenta */
+  --accent-dk:  #c1147a;
+  --accent-lt:  #fadeef;
   --amber:      #c97a1e;
   --warn-bg:    #fdf3e3;
   --line:       #e0ddd2;
   --radius:     14px;
-  --shadow:     0 10px 30px rgba(28, 36, 32, .08);
+  --shadow:     0 10px 30px rgba(31, 45, 61, .08);
   --maxw:       1080px;
 }
 
@@ -183,14 +183,6 @@ a:hover { color: var(--accent-dk); }
 }
 .hours-note svg { flex: none; }
 
-/* hero visual */
-.hero-art {
-  justify-self: center;
-  width: min(420px, 100%);
-}
-/* a stylized long-bike silhouette */
-.hero-art svg { width: 100%; height: auto; display: block; }
-
 /* ── Sections ────────────────────────────────────────────────── */
 section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 section + section { border-top: 1px solid var(--line); }
@@ -257,39 +249,10 @@ section + section { border-top: 1px solid var(--line); }
 .contact-list a { text-decoration: none; font-weight: 600; }
 .contact-list a:hover { text-decoration: underline; }
 
-.form-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  align-self: start;
-}
-.form-card h3 { margin: 0 0 1rem; }
-.field { margin-bottom: 1rem; }
-.field label { display: block; font-weight: 600; margin-bottom: .35rem; }
-.field .req { color: var(--amber); font-weight: 700; }
-.field input, .field textarea {
-  width: 100%;
-  font: inherit;
-  color: inherit;
-  padding: .7rem .85rem;
-  border: 1.5px solid var(--line);
-  border-radius: 10px;
-  background: #fdfcfa;
-}
-.field input:focus, .field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-lt);
-}
-.field textarea { min-height: 120px; resize: vertical; }
-.form-note { font-size: .9rem; color: var(--ink-soft); margin: .9rem 0 1rem; }
-
 /* footer */
 .site-footer {
   background: var(--ink);
-  color: #cfd6d1;
+  color: #c8d0da;
   padding: 2.5rem 0 2rem;
 }
 .site-footer a { color: #fff; }
@@ -310,7 +273,7 @@ section + section { border-top: 1px solid var(--line); }
 .footer-bottom {
   margin-top: 2rem;
   padding-top: 1.25rem;
-  border-top: 1px solid #35403a;
+  border-top: 1px solid #3a4a5c;
   font-size: .88rem;
   display: flex;
   flex-wrap: wrap;

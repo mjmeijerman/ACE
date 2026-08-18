@@ -45,31 +45,6 @@
           Enkel open op afspraak &middot; di&ndash;vr 10:00&ndash;17:00
         </p>
       </div>
-      <div class="hero-art" role="img" aria-label="Stijlvolle illustratie van een ligfiets">
-        <svg viewBox="0 0 420 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- ground -->
-          <line x1="10" y1="205" x2="410" y2="205" stroke="#c9c5b6" stroke-width="3" stroke-linecap="round"/>
-          <!-- front wheel -->
-          <circle cx="330" cy="160" r="45" stroke="#1c2420" stroke-width="8"/>
-          <circle cx="330" cy="160" r="8" fill="#1c2420"/>
-          <!-- back wheels (tandem) -->
-          <circle cx="95" cy="165" r="40" stroke="#1c2420" stroke-width="8"/>
-          <circle cx="95" cy="165" r="7" fill="#1c2420"/>
-          <circle cx="170" cy="165" r="40" stroke="#1c2420" stroke-width="8"/>
-          <circle cx="170" cy="165" r="7" fill="#1c2420"/>
-          <!-- frame: long recumbent body -->
-          <path d="M132 165 L195 90 L300 90 L330 160" stroke="#1f6f4a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M195 90 L250 165 L170 165" stroke="#1f6f4a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- seat back (reclined) -->
-          <path d="M255 160 L292 78" stroke="#1f6f4a" stroke-width="14" stroke-linecap="round"/>
-          <!-- handlebar -->
-          <path d="M300 90 L330 58 M312 50 L348 66" stroke="#1c2420" stroke-width="8" stroke-linecap="round"/>
-          <!-- saddle / rider hint -->
-          <ellipse cx="272" cy="140" rx="22" ry="12" fill="#155236"/>
-          <!-- pedals / crank near front -->
-          <circle cx="300" cy="165" r="12" stroke="#1c2420" stroke-width="5"/>
-        </svg>
-      </div>
     </section>
 
     <!-- ── Services ── -->
@@ -125,7 +100,7 @@
 
         <div class="booking">
           <div>
-            <p>Ik werk <strong>enkel op afspraak</strong>, zodat ik altijd genoeg tijd voor u en uw fiets kan reserveren. U kunt telefonisch, via e-mail, WhatsApp of het contactformulier een afspraak maken. Vaak is het mogelijk om uw fiets nog dezelfde dag weer mee naar huis te nemen.</p>
+            <p>Ik werk <strong>enkel op afspraak</strong>, zodat ik altijd genoeg tijd voor u en uw fiets kan reserveren. U kunt telefonisch, via e-mail of WhatsApp een afspraak maken. Vaak is het mogelijk om uw fiets nog dezelfde dag weer mee naar huis te nemen.</p>
             <ul class="contact-list">
               <li>
                 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5Z"/></svg></span>
@@ -146,23 +121,6 @@
             </ul>
           </div>
 
-          <form class="form-card" id="contactform" novalidate>
-            <h3>Contactformulier</h3>
-            <div class="field">
-              <label for="naam">Naam <span class="req" aria-hidden="true">*</span></label>
-              <input id="naam" name="naam" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
-              <input id="email" name="email" type="email" required autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="bericht">Waar kan ik u mee helpen?</label>
-              <textarea id="bericht" name="bericht" placeholder="Bijv. onderhoudsbeurt voor mijn ligfiets, beschikbaarheid deze week…"></textarea>
-            </div>
-            <p class="form-note">Bij ‘Verzenden’ opent uw e-mailprogramma het bericht naar <strong>info@ace-fietsen.nl</strong> — check het venster voordat u bevestigt. <noscript>Zonder JavaScript kunt u het bericht ook per e-mail sturen —</noscript> U kunt uiteraard ook direct bellen of WhatsApp-en.</p>
-            <button class="btn" type="button" id="verstuur">Verzenden met e-mailprogramma</button>
-          </form>
         </div>
       </div>
     </section>
@@ -204,17 +162,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const form = document.getElementById('contactform');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const naam = form.naam.value.trim();
-      const email = form.email.value.trim();
-      const bericht = form.bericht.value.trim();
-      if (!naam || !email) { form.reportValidity(); return; }
-      const subject = encodeURIComponent('Afspraakvia website — ' + naam);
-      const body = encodeURIComponent('Beste Wytske,\n\n' + (bericht || '(geen bericht ingevuld)') + '\n\nMet vriendelijke groet,\n' + naam + '\n' + email);
-      window.location.href = 'mailto:info@ace-fietsen.nl?subject=' + subject + '&body=' + body;
-    });
   </script>
 </body>
 </html>
