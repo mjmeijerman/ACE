@@ -4,9 +4,9 @@
   --ink-soft:   #4b5866;
   --bg:         #f7f5f0;   /* warm paper */
   --card:       #ffffff;
-  --accent:     #e63091;   /* logo magenta */
-  --accent-dk:  #c1147a;
-  --accent-lt:  #fadeef;
+  --accent:     #d1639c;   /* softer magenta */
+  --accent-dk:  #a93f7d;
+  --accent-lt:  #f7e2ee;
   --amber:      #c97a1e;
   --warn-bg:    #fdf3e3;
   --line:       #e0ddd2;
@@ -107,6 +107,32 @@ a:hover { color: var(--accent-dk); }
   padding: .3rem 0;
 }
 .nav ul a:hover { color: var(--accent); text-decoration: underline; }
+
+/* language toggle */
+.lang {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--card);
+}
+.lang button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: .35rem .7rem;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  line-height: 1.2;
+}
+.lang button:first-child { border-right: 1px solid var(--line); }
+.lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.lang button:hover:not([aria-pressed="true"]) { color: var(--accent); }
 
 .btn {
   display: inline-flex;
@@ -224,8 +250,7 @@ section + section { border-top: 1px solid var(--line); }
 .sig { color: var(--ink-soft); font-style: italic; }
 
 /* booking grid */
-.booking { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
-@media (min-width: 800px) { .booking { grid-template-columns: 1.05fr .95fr; } }
+.booking { display: grid; gap: 1.5rem; grid-template-columns: 1fr; max-width: 64ch; }
 
 .contact-list {
   list-style: none;
@@ -246,6 +271,7 @@ section + section { border-top: 1px solid var(--line); }
 .contact-list .icon { color: var(--accent); flex: none; margin-top: .15rem; }
 .contact-list .icon svg { width: 22px; height: 22px; }
 .contact-list b { display: block; font-size: .9rem; color: var(--ink-soft); font-weight: 600; }
+.contact-soft { font-weight: 400; color: var(--ink-soft); }
 .contact-list a { text-decoration: none; font-weight: 600; }
 .contact-list a:hover { text-decoration: underline; }
 
@@ -286,3 +312,40 @@ section + section { border-top: 1px solid var(--line); }
 .prose h2 { font-size: 1.35rem; margin-top: 2.2rem; }
 .prose ul { padding-left: 1.25rem; }
 .page-hero { padding-top: clamp(2.5rem, 6vw, 4rem); }
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+
+  .site-header { top: 0; }
+  .nav {
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    padding: .6rem 0;
+    row-gap: .15rem;
+    justify-content: space-between;
+  }
+  .brand { font-size: 1.05rem; }
+  .brand img { width: 30px; height: 30px; }
+  .nav ul { flex: 1 1 100%; justify-content: space-between; gap: .1rem .9rem; order: 3; }
+  .nav .btn { margin-left: auto; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero .actions { flex-direction: column; align-items: stretch; }
+  .hero .actions .btn { justify-content: center; }
+  .hours-note { white-space: normal; }
+
+  .card { padding: 1.15rem; }
+  .section-head { margin-bottom: 1.5rem; }
+
+  .contact-list li { flex-direction: row; padding: .8rem .9rem; gap: .7rem; }
+  .contact-list span:last-child { min-width: 0; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: .35rem; }
+}
+
+@media (max-width: 380px) {
+  .nav .btn.sm { padding: .4rem .8rem; font-size: .85rem; }
+  .hero .actions .btn { padding: .65rem 1rem; font-size: .95rem; }
+}

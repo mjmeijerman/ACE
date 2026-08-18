@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/svg+xml" href="pictures/logo_ace-fietsen.svg" />
 </head>
-<body>
-  <a class="skip-link" href="#inhoud">Ga direct naar de inhoud</a>
+<body data-page="index">
+  <a class="skip-link" href="#inhoud" data-i18n="skip">Ga direct naar de inhoud</a>
 
   <header class="site-header">
     <div class="container nav">
@@ -19,13 +19,17 @@
       </a>
       <nav aria-label="Hoofdmenu">
         <ul>
-          <li><a href="#welkom">Welkom</a></li>
-          <li><a href="#over-ace">Over ACE</a></li>
-          <li><a href="#afspraak">Afspraak maken</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="#welkom" data-i18n="nav-welkom">Welkom</a></li>
+          <li><a href="#over-ace" data-i18n="nav-over">Over ACE</a></li>
+          <li><a href="#afspraak" data-i18n="nav-afspraak">Afspraak maken</a></li>
+          <li>
+            <span class="lang" role="group" aria-label="Taal / Sprache">
+              <button type="button" data-lang="nl" aria-pressed="true">NL</button><button type="button" data-lang="de" aria-pressed="false">DE</button>
+            </span>
+          </li>
         </ul>
       </nav>
-      <a class="btn sm" href="#afspraak">Afspraak maken</a>
+      <a class="btn sm" href="#afspraak" data-i18n="cta">Afspraak maken</a>
     </div>
   </header>
 
@@ -33,16 +37,16 @@
     <!-- ── Hero ── -->
     <section class="hero container" id="welkom" aria-labelledby="hero-titel" style="border-top:0">
       <div>
-        <span class="eyebrow">Winterswijk &middot; ligfietsen &amp; trikes</span>
-        <h1 id="hero-titel">Welkom bij Achterhoek Cycle Engineering</h1>
-        <p class="lead">Heeft uw ligfiets of trike een onderhoudsbeurt of reparatie nodig? Dan bent u hier aan het goede adres.</p>
+        <span class="eyebrow" data-i18n="eyebrow">Winterswijk &middot; ligfietsen &amp; trikes</span>
+        <h1 id="hero-titel" data-i18n="h1">Welkom bij Achterhoek Cycle Engineering</h1>
+        <p class="lead" data-i18n="lead">Heeft uw ligfiets of trike een onderhoudsbeurt of reparatie nodig? Dan bent u hier aan het goede adres.</p>
         <div class="actions">
-          <a class="btn" href="#afspraak">Maak een afspraak</a>
-          <a class="btn ghost" href="tel:+31638731057">Bel: 06 38 73 10 57</a>
+          <a class="btn" href="#afspraak" data-i18n="btn-afspraak">Maak een afspraak</a>
+          <a class="btn ghost" href="tel:+31638731057" data-i18n="btn-bel">Bel: 06 38 73 10 57</a>
         </div>
         <p class="hours-note">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          Enkel open op afspraak &middot; di&ndash;vr 10:00&ndash;17:00
+          <span data-i18n="hours">Enkel open op afspraak</span>
         </p>
       </div>
     </section>
@@ -51,24 +55,24 @@
     <section id="services" aria-labelledby="services-titel">
       <div class="container">
         <div class="section-head">
-          <h2 id="services-titel">Waar kunt u bij ons terecht?</h2>
-          <p>Specialist in ligfietsen en trikes &mdash; van kleine beurt tot grotere reparatie.</p>
+          <h2 id="services-titel" data-i18n="svc-title">Waar kunt u bij ons terecht?</h2>
+          <p data-i18n="svc-sub">Specialist in ligfietsen en trikes &mdash; van kleine beurt tot grotere reparatie.</p>
         </div>
         <div class="cards">
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 5.6L3 17.6V21h3.4l5.7-5.7a4.5 4.5 0 0 0 5.6-6L14.5 12 12 9.5z"/></svg></div>
-            <h3>Onderhoud &amp; reparatie</h3>
-            <p>Uw ligfiets of trike krijgt een professionele onderhoudsbeurt of reparatie in onze werkplaats in Winterswijk.</p>
+            <h3 data-i18n="card1-t">Onderhoud &amp; reparatie</h3>
+            <p data-i18n="card1-p">Uw ligfiets of trike krijgt een professionele onderhoudsbeurt of reparatie in onze werkplaats in Winterswijk.</p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-            <h3>Snel gereed</h3>
-            <p>Maak een afspraak en uw fiets kan vaak dezelfde dag alweer mee naar huis.&nbsp;<sup>*</sup></p>
+            <h3 data-i18n="card2-t">Snel gereed</h3>
+            <p data-i18n="card2-p">Maak een afspraak en uw fiets kan vaak dezelfde dag alweer mee naar huis.&nbsp;<sup>*</sup></p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="8" r="4"/><path d="m9 13 3 3 3-3" stroke-linecap="round"/></svg></div>
-            <h3>Persoonlijke aandacht</h3>
-            <p>Eerlijk advies, degelijk vakwerk en tijd voor elke klant en elke fiets &mdash; ook voor een goed gesprek over ligfietsen onder het genot van een kop thee of koffie.</p>
+            <h3 data-i18n="card3-t">Persoonlijke aandacht</h3>
+            <p data-i18n="card3-p">Eerlijk advies, degelijk vakwerk en tijd voor elke klant en elke fiets &mdash; ook voor een goed gesprek over ligfietsen onder het genot van een kop thee of koffie.</p>
           </div>
         </div>
       </div>
@@ -78,14 +82,14 @@
     <section id="over-ace" aria-labelledby="over-titel">
       <div class="container">
         <div class="section-head">
-          <h2 id="over-titel">Over ACE</h2>
+          <h2 id="over-titel" data-i18n="over-title">Over ACE</h2>
         </div>
         <div class="about">
           <img src="pictures/wytske.jpg" alt="Wytske de Jong, oprichter van Achterhoek Cycle Engineering" style="width:100%;max-width:520px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:.5rem" loading="lazy" />
-          <p><strong>Achterhoek Cycle Engineering</strong> is de plek voor het onderhoud van uw ligfiets of trike in de Achterhoek.</p>
-          <p>Mijn naam is Wytske de Jong. In 2023 kocht ik een prachtige tweedehands velomobiel. Toen deze mankementen had die ik zelf niet meer opgelost kreeg, kwam ik bij Mark Burgers van Advanced Cycle Engineering in Winterswijk terecht. Tijdens de reparatie zijn we aan de praat geraakt over het fietsenmakersvak. Hij vertelde dat hij een opvolger zocht voor de onderhoudstak van het bedrijf. Zo kwam het dat ik in de zomer van 2024 in de leer ben gegaan bij Mark en zijn team. Zij hebben mij de fijne kneepjes en de liefde voor het vak geleerd.</p>
-          <p>Na 1,5 jaar meedraaien heb ik in 2025 de knoop doorgehakt om per 1 januari 2026 het onderhoudsstokje over te nemen van Mark. Zo is Achterhoek Cycle Engineering ontstaan. Een nieuwe naam, maar nog wel de oude vertrouwde locatie in Winterswijk. Op die manier blijft de kennis en service die u gewend bent gewoon bestaan &mdash; maar dan in een nieuw jasje.</p>
-          <p>Vanaf 1 januari 2026 bent u voor al het onderhoud aan uw ligfiets of trike van harte welkom bij Achterhoek Cycle Engineering. Wat u van mij mag verwachten? Eerlijk advies, degelijk vakwerk en persoonlijke aandacht. Ik neem de tijd voor elke klant en elke fiets, zodat u met een goed gevoel weer op pad kunt. <span class="sig">&mdash; Wytske de Jong</span></p>
+          <p data-i18n="about-1"><strong>Achterhoek Cycle Engineering</strong> is de plek voor het onderhoud van uw ligfiets of trike in de Achterhoek.</p>
+          <p data-i18n="about-2">Mijn naam is Wytske de Jong. In 2023 kocht ik een prachtige tweedehands velomobiel. Toen deze mankementen had die ik zelf niet meer opgelost kreeg, kwam ik bij Mark Burgers van Advanced Cycle Engineering in Winterswijk terecht. Tijdens de reparatie zijn we aan de praat geraakt over het fietsenmakersvak. Hij vertelde dat hij een opvolger zocht voor de onderhoudstak van het bedrijf. Zo kwam het dat ik in de zomer van 2024 in de leer ben gegaan bij Mark en zijn team. Zij hebben mij de fijne kneepjes en de liefde voor het vak geleerd.</p>
+          <p data-i18n="about-3">Na 1,5 jaar meedraaien heb ik in 2025 de knoop doorgehakt om per 1 januari 2026 het onderhoudsstokje over te nemen van Mark. Zo is Achterhoek Cycle Engineering ontstaan. Een nieuwe naam, maar nog wel de oude vertrouwde locatie in Winterswijk. Op die manier blijft de kennis en service die u gewend bent gewoon bestaan &mdash; maar dan in een nieuw jasje.</p>
+          <p data-i18n="about-4">Vanaf 1 januari 2026 bent u voor al het onderhoud aan uw ligfiets of trike van harte welkom bij Achterhoek Cycle Engineering. Wat u van mij mag verwachten? Eerlijk advies, degelijk vakwerk en persoonlijke aandacht. Ik neem de tijd voor elke klant en elke fiets, zodat u met een goed gevoel weer op pad kunt. <span class="sig">&mdash; Wytske de Jong</span></p>
         </div>
       </div>
     </section>
@@ -94,33 +98,28 @@
     <section id="afspraak" aria-labelledby="afspraak-titel">
       <div class="container">
         <div class="section-head">
-          <h2 id="afspraak-titel">Afspraak maken</h2>
-          <p>Kies de manier die u het beste uitkomt om uw afspraak te maken.</p>
+          <h2 id="afspraak-titel" data-i18n="appt-title">Afspraak maken</h2>
+          <p data-i18n="appt-sub">Kies de manier die u het beste uitkomt om uw afspraak te maken.</p>
         </div>
 
         <div class="booking">
           <div>
-            <p>Ik werk <strong>enkel op afspraak</strong>, zodat ik altijd genoeg tijd voor u en uw fiets kan reserveren. U kunt telefonisch, via e-mail of WhatsApp een afspraak maken. Vaak is het mogelijk om uw fiets nog dezelfde dag weer mee naar huis te nemen.</p>
+            <p data-i18n="book-p">Ik werk <strong>enkel op afspraak</strong>, zodat ik altijd genoeg tijd voor u en uw fiets kan reserveren. U kunt telefonisch, via e-mail of WhatsApp een afspraak maken. Vaak is het mogelijk om uw fiets nog dezelfde dag weer mee naar huis te nemen.</p>
             <ul class="contact-list">
               <li>
                 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5Z"/></svg></span>
-                <span><b>Telefoon &amp; WhatsApp</b><a href="tel:+31638731057">+31 6 38731057</a> <span style="font-weight:400;color:var(--ink-soft)">&middot; bereikbaar di&ndash;vr, 10:00&ndash;17:00</span><br/><a class="wa" href="https://wa.me/31638731057" rel="noopener" aria-label="WhatsApp-bericht sturen">Direct WhatsApp-bericht &rarr;</a></span>
+                <span><b data-i18n="c-phone">Telefoon &amp; WhatsApp</b><a href="tel:+31638731057">+31 6 38731057</a> <span class="contact-soft" data-i18n="c-phone-note">&middot; bereikbaar di&ndash;vr, 10:00&ndash;17:00</span><br/><a class="wa" href="https://wa.me/31638731057" rel="noopener" data-i18n="c-wa">Direct WhatsApp-bericht &rarr;</a></span>
               </li>
               <li>
                 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-                <span><b>E-mail</b><a href="mailto:info@ace-fietsen.nl">info@ace-fietsen.nl</a></span>
+                <span><b data-i18n="c-email">E-mail</b><a href="mailto:info@ace-fietsen.nl">info@ace-fietsen.nl</a></span>
               </li>
               <li>
                 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-                <span><b>Bezoekadres</b>Weurden 60, 7101 NL Winterswijk</span>
-              </li>
-              <li>
-                <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V5m0 14 6-2m-6 2 6 2M16 5l4 2v10l-4 2-4-2V7l4-2Zm0 6h.01"/></svg></span>
-                <span><b>Kamer van Koophandel</b>KVK: 98809369</span>
+                <span><b data-i18n="c-addr">Bezoekadres</b><span data-i18n="c-addr-v">Weurden 60, 7101 NL Winterswijk</span></span>
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </section>
@@ -131,11 +130,11 @@
       <div class="footer-grid">
         <div>
           <h4>ACE-fietsen</h4>
-          <p>Achterhoek Cycle Engineering<br/>Ligfietsen en trikes &middot; Winterswijk</p>
+          <p data-i18n="ft-brand">Achterhoek Cycle Engineering<br/>Ligfietsen en trikes &middot; Winterswijk</p>
           <p>KVK: 98809369</p>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4 data-i18n="ft-contact">Contact</h4>
           <ul>
             <li>Weurden 60, 7101 NL Winterswijk</li>
             <li><a href="tel:+31638731057">06 38 73 10 57</a></li>
@@ -144,22 +143,23 @@
           </ul>
         </div>
         <div>
-          <h4>Menu</h4>
+          <h4 data-i18n="ft-menu">Menu</h4>
           <ul>
-            <li><a href="index.html#welkom">Welkom bij ACE</a></li>
-            <li><a href="index.html#over-ace">Over ACE</a></li>
-            <li><a href="index.html#afspraak">Afspraak maken</a></li>
-            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="index.html#welkom" data-i18n="ft-m1">Welkom bij ACE</a></li>
+            <li><a href="index.html#over-ace" data-i18n="ft-m2">Over ACE</a></li>
+            <li><a href="index.html#afspraak" data-i18n="ft-m3">Afspraak maken</a></li>
+            <li><a href="privacy.html" data-i18n="ft-m4">Privacy policy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>&copy; <span id="year">2026</span> Achterhoek Cycle Engineering (ACE-fietsen)</span>
-        <span>Enkel open op afspraak &middot; di&ndash;vr 10:00&ndash;17:00</span>
+        <span data-i18n="ft-hours">Enkel open op afspraak</span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/svg+xml" href="pictures/logo_ace-fietsen.svg" />
 </head>
-<body>
-  <a class="skip-link" href="#inhoud">Ga direct naar de inhoud</a>
+<body data-page="privacy">
+  <a class="skip-link" href="#inhoud" data-i18n="skip">Ga direct naar de inhoud</a>
 
   <header class="site-header">
     <div class="container nav">
@@ -20,61 +20,65 @@
       </a>
       <nav aria-label="Hoofdmenu">
         <ul>
-          <li><a href="index.html#welkom">Welkom</a></li>
-          <li><a href="index.html#over-ace">Over ACE</a></li>
-          <li><a href="index.html#afspraak">Afspraak maken</a></li>
-          <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+          <li><a href="index.html#welkom" data-i18n="nav-welkom">Welkom</a></li>
+          <li><a href="index.html#over-ace" data-i18n="nav-over">Over ACE</a></li>
+          <li><a href="index.html#afspraak" data-i18n="nav-afspraak">Afspraak maken</a></li>
+          <li>
+            <span class="lang" role="group" aria-label="Taal / Sprache">
+              <button type="button" data-lang="nl" aria-pressed="true">NL</button><button type="button" data-lang="de" aria-pressed="false">DE</button>
+            </span>
+          </li>
         </ul>
       </nav>
-      <a class="btn sm" href="index.html#afspraak">Afspraak maken</a>
+      <a class="btn sm" href="index.html#afspraak" data-i18n="cta">Afspraak maken</a>
     </div>
   </header>
 
   <main id="inhoud">
     <section class="page-hero" aria-labelledby="titel">
       <div class="container section-head">
-        <h1 id="titel" style="font-size:clamp(1.8rem,4.5vw,2.6rem);margin:0 0 .5rem">Privacy policy</h1>
-        <p>Wie wij zijn en wat wij doen met uw gegevens.</p>
+        <h1 id="titel" style="font-size:clamp(1.8rem,4.5vw,2.6rem);margin:0 0 .5rem" data-i18n="p-title">Privacy policy</h1>
+        <p data-i18n="p-sub">Wie wij zijn en wat wij doen met uw gegevens.</p>
       </div>
     </section>
 
     <section aria-label="Privacy policy inhoud" style="padding-bottom:4rem">
       <div class="container prose">
-        <p>Achterhoek Cycle Engineering hecht veel waarde aan de bescherming van uw persoonsgegevens. In deze privacy policy willen we heldere en transparante informatie geven over hoe wij omgaan met persoonsgegevens.</p>
-        <p>Wij doen er alles aan om uw privacy te waarborgen en gaan daarom zorgvuldig om met persoonsgegevens. Achterhoek Cycle Engineering houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming. Dit brengt met zich mee dat wij in ieder geval:</p>
+        <p data-i18n="pr-1">Achterhoek Cycle Engineering hecht veel waarde aan de bescherming van uw persoonsgegevens. In deze privacy policy willen we heldere en transparante informatie geven over hoe wij omgaan met persoonsgegevens.</p>
+        <p data-i18n="pr-2">Wij doen er alles aan om uw privacy te waarborgen en gaan daarom zorgvuldig om met persoonsgegevens. Achterhoek Cycle Engineering houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming. Dit brengt met zich mee dat wij in ieder geval:</p>
         <ul>
-          <li>uw persoonsgegevens verwerken in overeenstemming met het doel waarvoor deze zijn verstrekt; deze doelen en het type persoonsgegevens zijn beschreven in deze privacy policy;</li>
-          <li>verwerking van uw persoonsgegevens beperken tot enkel die gegevens welke minimaal nodig zijn voor de doeleinden waarvoor ze worden verwerkt;</li>
-          <li>vragen om uw uitdrukkelijke toestemming als wij deze nodig hebben voor de verwerking van uw persoonsgegevens;</li>
-          <li>passende technische en organisatorische maatregelen hebben genomen zodat de beveiliging van uw persoonsgegevens gewaarborgd is;</li>
-          <li>geen persoonsgegevens doorgeven aan andere partijen, tenzij dit nodig is voor de uitvoering van de doeleinden waarvoor ze zijn verstrekt;</li>
-          <li>op de hoogte zijn van uw rechten omtrent uw persoonsgegevens, u hierop willen wijzen en deze respecteren.</li>
+          <li data-i18n="pr-3a">uw persoonsgegevens verwerken in overeenstemming met het doel waarvoor deze zijn verstrekt; deze doelen en het type persoonsgegevens zijn beschreven in deze privacy policy;</li>
+          <li data-i18n="pr-3b">verwerking van uw persoonsgegevens beperken tot enkel die gegevens welke minimaal nodig zijn voor de doeleinden waarvoor ze worden verwerkt;</li>
+          <li data-i18n="pr-3c">vragen om uw uitdrukkelijke toestemming als wij deze nodig hebben voor de verwerking van uw persoonsgegevens;</li>
+          <li data-i18n="pr-3d">passende technische en organisatorische maatregelen hebben genomen zodat de beveiliging van uw persoonsgegevens gewaarborgd is;</li>
+          <li data-i18n="pr-3e">geen persoonsgegevens doorgeven aan andere partijen, tenzij dit nodig is voor de uitvoering van de doeleinden waarvoor ze zijn verstrekt;</li>
+          <li data-i18n="pr-3f">op de hoogte zijn van uw rechten omtrent uw persoonsgegevens, u hierop willen wijzen en deze respecteren.</li>
         </ul>
-        <p>Als Achterhoek Cycle Engineering zijn wij verantwoordelijk voor de verwerking van uw persoonsgegevens. Indien u na het doornemen van onze privacy policy, of in algemenere zin, vragen heeft hierover of contact met ons wenst op te nemen, kan dit via de contactgegevens onder aan dit document.</p>
+        <p data-i18n="pr-4">Als Achterhoek Cycle Engineering zijn wij verantwoordelijk voor de verwerking van uw persoonsgegevens. Indien u na het doornemen van onze privacy policy, of in algemenere zin, vragen heeft hierover of contact met ons wenst op te nemen, kan dit via de contactgegevens onder aan dit document.</p>
 
-        <h2>Verwerking van persoonsgegevens van klanten of leveranciers</h2>
-        <p>Persoonsgegevens van klanten of leveranciers worden door Achterhoek Cycle Engineering verwerkt ten behoeve van de volgende doelstellingen:</p>
+        <h2 data-i18n="pr-h1">Verwerking van persoonsgegevens van klanten of leveranciers</h2>
+        <p data-i18n="pr-v1">Persoonsgegevens van klanten of leveranciers worden door Achterhoek Cycle Engineering verwerkt ten behoeve van de volgende doelstellingen:</p>
         <ul>
-          <li>administratieve doeleinden;</li>
-          <li>communicatie over de opdracht en/of uitnodigingen;</li>
-          <li>het uitvoering geven aan of het uitgeven van een opdracht.</li>
+          <li data-i18n="pr-v2">administratieve doeleinden;</li>
+          <li data-i18n="pr-v3">communicatie over de opdracht en/of uitnodigingen;</li>
+          <li data-i18n="pr-v4">het uitvoering geven aan of het uitgeven van een opdracht.</li>
         </ul>
-        <p>Grondslag voor deze persoonsgegevens is:</p>
+        <p data-i18n="pr-v5">Grondslag voor deze persoonsgegevens is:</p>
         <ul>
-          <li>de overeengekomen opdracht.</li>
+          <li data-i18n="pr-v6">de overeengekomen opdracht.</li>
         </ul>
-        <p>Voor de bovenstaande doelstellingen kan Achterhoek Cycle Engineering de volgende persoonsgegevens van u vragen:</p>
+        <p data-i18n="pr-d0">Voor de bovenstaande doelstellingen kan Achterhoek Cycle Engineering de volgende persoonsgegevens van u vragen:</p>
         <ul>
-          <li>voornaam;</li>
-          <li>tussenvoegsel;</li>
-          <li>achternaam;</li>
-          <li>telefoonnummer;</li>
-          <li>e-mailadres.</li>
+          <li data-i18n="pr-d1">voornaam;</li>
+          <li data-i18n="pr-d2">tussenvoegsel;</li>
+          <li data-i18n="pr-d3">achternaam;</li>
+          <li data-i18n="pr-d4">telefoonnummer;</li>
+          <li data-i18n="pr-d5">e-mailadres.</li>
         </ul>
-        <p>Uw persoonsgegevens worden door Achterhoek Cycle Engineering opgeslagen ten behoeve van bovengenoemde verwerkingen voor de periode: gedurende de looptijd van de overeenkomst en daarna alleen in de financiële administratie voor maximaal 7 jaar.</p>
+        <p data-i18n="pr-d6">Uw persoonsgegevens worden door Achterhoek Cycle Engineering opgeslagen ten behoeve van bovengenoemde verwerkingen voor de periode: gedurende de looptijd van de overeenkomst en daarna alleen in de financiële administratie voor maximaal 7 jaar.</p>
 
-        <h2>Contactgegevens</h2>
-        <p>
+        <h2 data-i18n="pr-h2">Contactgegevens</h2>
+        <p data-i18n="pr-c1">
           Achterhoek Cycle Engineering (ACE-fietsen)<br />
           Weurden 60, 7101 NL Winterswijk<br />
           Tel. en WhatsApp: <a href="tel:+31638731057">06 38 73 10 57</a><br />
@@ -88,11 +92,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-bottom" style="border-top:0;margin-top:0;padding-top:0;justify-content:center">
-        <span>&copy; <span id="year">2026</span> Achterhoek Cycle Engineering (ACE-fietsen) &middot; <a href="index.html">Terug naar de homepage</a></span>
+        <span>&copy; <span id="year">2026</span> Achterhoek Cycle Engineering (ACE-fietsen) &middot; <a href="index.html" data-i18n="ft-back">Terug naar de homepage</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
